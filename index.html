@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="main.css" />
+		<script src="index.js" type="module" defer></script>
+	</head>
+	<body>
+	<div class="card p-3 col-8 border-0 shadow-lg"> 
+		
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" href="#" id="link-register">Register</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" id="link-login">Login</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="container card p-3 border-0" id="form-register">
+			<form class="row g-3 needs-validation pt-4" novalidate>
+				<div class="col-6">
+					<label for="validationCustom01" class="form-label">First name</label>
+					<input
+						type="text"
+						class="form-control"
+						id="validationCustom01"
+						required
+						placeholder="First name"
+						aria-label="First name"
+						name="register-firstname"
+					/>
+					<div class="valid-feedback">Looks good!</div>
+				</div>
+				<div class="col-6">
+					<label for="validationCustom02" class="form-label">Last name</label>
+					<input
+						type="text"
+						class="form-control"
+						id="validationCustom02"
+						required
+						placeholder="Last name"
+						aria-label="Last name"
+						name="register-lastname"
+					/>
+					<div class="valid-feedback">Looks good!</div>
+				</div>
+
+				<div class="col-12">
+					<label for="validationCustomUsername" class="form-label"
+						>Username</label
+					>
+					<div class="input-group has-validation">
+						<span class="input-group-text" id="inputGroupPrepend">@</span>
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustomUsername"
+							aria-describedby="inputGroupPrepend"
+							autocomplete="username"
+							name="register-username"
+							required
+						/>
+						<div class="invalid-feedback">Please choose a username.</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<label for="validationCustom03" class="form-label">Email</label>
+					<input
+						type="email"
+						class="form-control"
+						id="validationCustom03"
+						autocomplete="email"
+						name="register-email"
+						required
+					/>
+					<div class="invalid-feedback">Please provide a valid email.</div>
+				</div>
+
+				<div class="col-12">
+					<label for="passwordD" class="form-label">Password</label>
+					<input
+						type="password"
+						class="form-control"
+						id="passwordD"
+						name="register-password"
+						required
+						autocomplete="current-password"
+						pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+-=\\|[\]{};:,./?]).{8,}$"
+					/>
+					<div class="invalid-feedback">
+						Please provide a stronger password. Minimum length is 8 characters,
+						with at least one uppercase and one lowercase character and one
+						special character.
+					</div>
+					<div class="col-12" id="password-strength-indicator">
+						<div id="password-strength-bar"></div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="container card p-3 border-0 d-none" id="form-login">
+			<form class="pt-4">
+				<div class="form-floating mb-2">
+					<input
+						type="text"
+						class="form-control"
+						id="floatingInput"
+						placeholder="Username"
+						autocomplete="username"
+						name="login-username"
+					/>
+					
+					<label for="floatingInput">Username</label>
+				</div>
+				<div class="form-floating mb-2">
+					<input
+						type="password"
+						class="form-control"
+						id="floatingPassword"
+						placeholder="Password"
+						autocomplete="current-password"
+						name="login-password"
+					/>
+					<div class="invalid-feedback">Password or username is incorrect.</div>
+					<label for="floatingPassword">Password</label>
+				</div>
+				<button class="w-100 btn btn-lg btn-primary mt-3" type="submit">
+					Sign in
+				</button>
+			</form>
+		</div>
+	</div>
+	</body>
+</html>
